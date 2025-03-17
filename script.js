@@ -1,13 +1,13 @@
 function generateCourseInputs() {
     let numCourses = parseInt(document.getElementById("numCourses").value);
     let container = document.getElementById("coursesContainer");
-    container.innerHTML = ""; 
+    container.innerHTML = "";
 
     for (let i = 0; i < numCourses; i++) {
         container.innerHTML += `
             <div class="course-block" id="courseBlock${i}">
-                <h4>Course ${i + 1}</h4>
-                <label>Credit:</label>
+                <h4 class=" course">Course ${i + 1}</h4>
+                <label>Credit</label>
                 <input type="number" id="credit${i}" min="1" step="0.5" oninput="updateFields(${i})">
                 <div id="marksInput${i}"></div>
             </div>
@@ -21,22 +21,22 @@ function updateFields(index) {
 
     if (credit >= 3) {
         marksDiv.innerHTML = `
-            <label>CT1 (10):</label><input type="number" id="ct1_${index}" min="0" max="10">
-            <label>CT2 (10):</label><input type="number" id="ct2_${index}" min="0" max="10">
-            <label>CT3 (10):</label><input type="number" id="ct3_${index}" min="0" max="10">
-            <label>CT4 (10):</label><input type="number" id="ct4_${index}" min="0" max="10">
-            <label>Midterm (20):</label><input type="number" id="midterm_${index}" min="0" max="20">
-            <label>Assignment (10):</label><input type="number" id="assignment_${index}" min="0" max="10">
-            <label>Attendance (10):</label><input type="number" id="attendance_${index}" min="0" max="10">
-            <label>Final Exam (100):</label><input type="number" id="final_${index}" min="0" max="100">
+            <label>Class Test 1 </label><input type="number" id="ct1_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Class Test 2 </label><input type="number" id="ct2_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Class Test 3 </label><input type="number" id="ct3_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Class Test 4 </label><input type="number" id="ct4_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Midterm </label><input type="number" id="midterm_${index}" min="0" max="20" placeholder="Out of 20">
+            <label>Assignment </label><input type="number" id="assignment_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Final Exam </label><input type="number" id="final_${index}" min="0" max="100" placeholder="Out of 100">
         `;
     } else {
         marksDiv.innerHTML = `
-            <label>Quiz (20):</label><input type="number" id="quiz_${index}" min="0" max="20">
-            <label>Lab Report (10):</label><input type="number" id="lab_${index}" min="0" max="10">
-            <label>Assignment (10):</label><input type="number" id="assignment_${index}" min="0" max="10">
-            <label>Attendance (10):</label><input type="number" id="attendance_${index}" min="0" max="10">
-            <label>Final Exam (40):</label><input type="number" id="final_${index}" min="0" max="40">
+            <label>Quiz </label><input type="number" id="quiz_${index}" min="0" max="20">
+            <label>Lab Report </label><input type="number" id="lab_${index}" min="0" max="10">
+            <label>Assignment </label><input type="number" id="assignment_${index}" min="0" max="10">
+            <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10">
+            <label>Final Exam </label><input type="number" id="final_${index}" min="0" max="40">
         `;
     }
 }
@@ -47,25 +47,26 @@ function updateFields(index) {
 
     if (credit >= 3) {
         marksDiv.innerHTML = `
-            <label>CT1 (10):</label><input type="number" id="ct1_${index}" min="0" max="10">
-            <label>CT2 (10):</label><input type="number" id="ct2_${index}" min="0" max="10">
-            <label>CT3 (10):</label><input type="number" id="ct3_${index}" min="0" max="10">
-            <label>CT4 (10):</label><input type="number" id="ct4_${index}" min="0" max="10">
-            <label>Midterm (20):</label><input type="number" id="midterm_${index}" min="0" max="20">
-            <label>Assignment (10):</label><input type="number" id="assignment_${index}" min="0" max="10">
-            <label>Attendance (10):</label><input type="number" id="attendance_${index}" min="0" max="10">
-            <label>Final Exam (100):</label><input type="number" id="final_${index}" min="0" max="100">
+            <label>Class Test 1 </label><input type="number" id="ct1_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Class Test 2 </label><input type="number" id="ct2_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Class Test 3 </label><input type="number" id="ct3_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Class Test 4 </label><input type="number" id="ct4_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Midterm </label><input type="number" id="midterm_${index}" min="0" max="20" placeholder="Out of 20">
+            <label>Assignment </label><input type="number" id="assignment_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Final Exam </label><input type="number" id="final_${index}" min="0" max="100" placeholder="Expected mark Out of 100">
         `;
     } else {
         marksDiv.innerHTML = `
-            <label>Quiz (20):</label><input type="number" id="quiz_${index}" min="0" max="20">
-            <label>Lab Report (10):</label><input type="number" id="lab_${index}" min="0" max="10">
-            <label>Assignment (10):</label><input type="number" id="assignment_${index}" min="0" max="10">
-            <label>Attendance (10):</label><input type="number" id="attendance_${index}" min="0" max="10">
-            <label>Viva (10):</label><input type="number" id="viva_${index}" min="0" max="10">
-            <label>Final Exam (40):</label><input type="number" id="final_${index}" min="0" max="40">
-        `;
+            <label>Quiz </label><input type="number" id="quiz_${index}" min="0" max="20" placeholder="Out of 20">
+            <label>Lab Report </label><input type="number" id="lab_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Assignment </label><input type="number" id="assignment_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Viva </label><input type="number" id="viva_${index}" min="0" max="10" placeholder="Out of 10">
+            <label>Final Exam </label><input type="number" id="final_${index}" min="0" max="40" placeholder=" Expected mark Out of 40">
+        `;
     }
+
 }
 
 function calculateCGPA() {
