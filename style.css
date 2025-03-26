@@ -126,7 +126,7 @@ button:hover {
 
 /* Ensure labels are properly spaced above inputs */
 .course-block label {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-top: 10px; /* Adds space between input fields */
     display: block; /* Forces label to be on top */
@@ -134,11 +134,11 @@ button:hover {
 
 /* Ensure inputs take up full width */
 .course-block input {
-    width: 100%;
-    padding: 8px;
+    width: 90%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
@@ -204,6 +204,8 @@ footer {
     max-width: 200px; /* Ensures input isn’t too wide */
     padding: 10px;
     text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 
