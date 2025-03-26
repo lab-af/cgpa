@@ -1,0 +1,230 @@
+* {
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.heading {
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 15px auto;
+    background: rgb(253, 251, 238);
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 8px 10px 8px 9px rgb(77, 85, 204);
+}
+
+.selection-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.selection-buttons button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.selection-buttons button:hover {
+    background-color: #0056b3;
+
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+
+button {
+    padding: 10px;
+    margin: 10px;
+    cursor: auto;
+    background-color: #211C84;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.name {
+    text-decoration: none;
+}
+
+button:hover {
+    box-shadow: 0 0 3px #161179, 0 0 3px #161179;
+    background-color: #7A73D1;
+
+
+}
+
+.link:hover {
+
+    color: red;
+    text-decoration: none;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.course-block {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    background: #fafafa;
+    border-radius: 5px;
+    width: 100%; /* Ensures it takes full width */
+    display: flex;
+    flex-direction: column; /* Keeps elements stacked */
+    align-items: center; /* Aligns text to the left */
+    box-sizing: border-box;
+}
+
+
+/* Ensure labels are properly spaced above inputs */
+.course-block label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px; /* Adds space between input fields */
+    display: block; /* Forces label to be on top */
+}
+
+/* Ensure inputs take up full width */
+.course-block input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Ensure alignment of marks input section */
+#marksInput0 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.course {
+    font-size: 24px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%; 
+    margin-bottom: 15px; /* Add space between the two rows */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Makes label stay above input */
+    align-items: center; /* Centers elements */
+    width: 100%;
+    margin-bottom: 15px; /* Adds space between the two input sections */
+}
+
+.input-group label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Adds spacing between label and input */
+}
+
+.input-group input {
+    width: 90%; /* Makes input field wider */
+    max-width: 200px; /* Ensures input isn’t too wide */
+    padding: 10px;
+    text-align: center;
+}
+
+
+.link {
+    text-decoration: none; /* Removes the underline */
+    color: #211C84; /* Keeps the link color */
+    font-weight: 500;
+}
+
+.link:hover {
+    text-decoration: underline; /* Optional: Underline on hover */
+    color: rgb(250, 92, 92); /* Optional: Changes color when hovered */
+}
+
+.name{
+    font-weight: 500;
+}
+
+
+::placeholder{
+    font-size: 13px;
+}
+
+ 

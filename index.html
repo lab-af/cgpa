@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="frontPage">
+
+        <div class="container">
+
+            <h1 class="heading">CGPA Calculator</h1>
+
+            <!-- Mode Selection -->
+            <div id="modeSelection">
+                <h3>Select Your Faculty</h3>
+                <button onclick="selectMode('FBS')">FBS</button>
+                <button onclick="selectMode('FST')">FST</button>
+            </div>
+
+            <!-- Input Form (Initially Hidden) -->
+            <div id="mainForm" style="display: none;" class="table">
+
+                <!-- Number of Courses -->
+                <div class="input-group">
+                    <label for="numCourses" class="heading-text">Number of Courses</label>
+                    <input type="number" id="numCourses" min="1" class="box">
+                </div>
+
+                <!-- Total Credits -->
+                <div class="input-group">
+                    <label for="totalCredits" class="heading-text">Total Credits</label>
+                    <input type="number" id="totalCredits" min="1" placeholder="CURRENT SEMESTER" class="box">
+                </div>
+
+
+
+                <button onclick="generateCourseInputs()">Next</button>
+                <div id="coursesContainer"></div>
+
+
+                <h3 id="result"></h3>
+            </div>
+        </div>
+
+
+    </div>
+    <footer>
+
+        <h4 class="name"> <span>
+                Developed by <a href="https://www.facebook.com/lamubib0709" class="link">Labib</a> & <a
+                    href="https://www.facebook.com/partho.sarothi.ghosh.2005" class="link">Partho</a> </h4>
+            
+        </span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
