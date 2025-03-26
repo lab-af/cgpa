@@ -71,7 +71,7 @@ function updateFields(index) {
                 <label>Observation </label><input type="number" id="observation_${index}" min="0" max="10">
                 <label>Viva </label><input type="number" id="viva_${index}" min="0" max="10">
                 <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10">
-                <label>Expected Final Exam Marks </label><input type="number" id="final_${index}" min="0" max="40">
+                <label>Expected Final Exam Marks </label><input type="number" id="final_${index}" min="0" max="40" placeholder=" Out of 40">
             `;
         }
     }
