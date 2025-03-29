@@ -50,7 +50,38 @@ function updateFields(index) {
             <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10">
             <label>Expected Final Exam Marks </label><input type="number" id="final_${index}" min="0" max="100" placeholder=" Out of 100" >
         </div>` ;
-    } else {
+    }
+    
+    else if (mode === "FSSS"){
+        marksDiv.innerHTML = `
+                <label>Class Test 1 </label><input type="number" id="ct1_${index}" min="0" max="10">
+                <label>Class Test 2 </label><input type="number" id="ct2_${index}" min="0" max="10">
+                <label>Class Test 3 </label><input type="number" id="ct3_${index}" min="0" max="10">
+                <label>Class Test 4 </label><input type="number" id="ct4_${index}" min="0" max="10">
+                <label>Term Paper </label><input type="number" id="term_${index}" min="0" max="10">
+                <label>Midterm </label><input type="number" id="midterm_${index}" min="0" max="20"  placeholder=" Out of 20">
+                <label>Assignment </label><input type="number" id="assignment_${index}" min="0" max="10">
+                <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10">
+                <label>Expected Final Exam Marks</label><input type="number" id="final_${index}" min="0" max="100" placeholder=" Out of 100" >
+            `;
+    }
+
+
+    else if (mode === "FASS"){
+        marksDiv.innerHTML = `
+                <label>Class Test 1 </label><input type="number" id="ct1_${index}" min="0" max="10">
+                <label>Class Test 2 </label><input type="number" id="ct2_${index}" min="0" max="10">
+                <label>Class Test 3 </label><input type="number" id="ct3_${index}" min="0" max="10">
+                <label>Class Test 4 </label><input type="number" id="ct4_${index}" min="0" max="10">
+                <label>Term Paper </label><input type="number" id="term_${index}" min="0" max="10">
+                <label>Midterm </label><input type="number" id="midterm_${index}" min="0" max="20"  placeholder=" Out of 20">
+                <label>Assignment </label><input type="number" id="assignment_${index}" min="0" max="10">
+                <label>Attendance </label><input type="number" id="attendance_${index}" min="0" max="10">
+                <label>Expected Final Exam Marks</label><input type="number" id="final_${index}" min="0" max="100" placeholder=" Out of 100" >
+            `;
+    }
+    
+    else {
         if (credit >= 3) {
             // FST (Regular Courses)
             marksDiv.innerHTML = `
@@ -102,7 +133,41 @@ function calculateCGPA() {
             let finalScore = finalExam * 0.4;
 
             totalScore = ctMarks.reduce((sum, mark) => sum + mark, 0) + termPaper + assignment + midterm + attendance + finalScore;
-        } else {
+        }
+        
+        else if(mode === "FSSS"){
+            let ctMarks = ["ct1", "ct2", "ct3", "ct4"]
+                    .map(id => parseFloat(document.getElementById(`${id}_${i}`).value) || 0)
+                    .sort((a, b) => b - a)  // Sort in descending order
+                    .slice(0, 3);  // Take the best 3
+
+                let ctAvg = ctMarks.reduce((sum, mark) => sum + mark, 0) / 3;  // Average of best 3 CTs
+
+                totalScore = ctAvg +
+                    (parseFloat(document.getElementById(`midterm_${i}`).value) || 0) +
+                    (parseFloat(document.getElementById(`assignment_${i}`).value) || 0) +
+                    (parseFloat(document.getElementById(`term_${i}`).value) || 0) +
+                    (parseFloat(document.getElementById(`attendance_${i}`).value) || 0) +
+                    ((parseFloat(document.getElementById(`final_${i}`).value) || 0) * 0.4);
+        }
+
+        else if(mode === "FSSS"){
+            let ctMarks = ["ct1", "ct2", "ct3", "ct4"]
+                    .map(id => parseFloat(document.getElementById(`${id}_${i}`).value) || 0)
+                    .sort((a, b) => b - a)  // Sort in descending order
+                    .slice(0, 3);  // Take the best 3
+
+                let ctAvg = ctMarks.reduce((sum, mark) => sum + mark, 0) / 3;  // Average of best 3 CTs
+
+                totalScore = ctAvg +
+                    (parseFloat(document.getElementById(`midterm_${i}`).value) || 0) +
+                    (parseFloat(document.getElementById(`assignment_${i}`).value) || 0) +
+                    (parseFloat(document.getElementById(`term_${i}`).value) || 0) +
+                    (parseFloat(document.getElementById(`attendance_${i}`).value) || 0) +
+                    ((parseFloat(document.getElementById(`final_${i}`).value) || 0) * 0.4);
+        }
+        
+        else {
             if (credit >= 3) {
                 // FST Regular Calculation
                 let ctMarks = ["ct1", "ct2", "ct3", "ct4"]
